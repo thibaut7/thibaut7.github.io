@@ -1,0 +1,22 @@
+/* Style général pour la barre de navigation */
+.navbar {
+    text-align: right; /* Aligner les éléments à droite */
+    background-color: #f8f9fa; /* Couleur de fond légère, modifiable selon vos préférences */
+    padding: 10px 0; /* Un peu de padding pour l'esthétique */
+}
+
+/* Style des liens dans la barre de navigation */
+.navbar a {
+    display: inline-block; /* Afficher les liens en ligne */
+    margin: 0 10px; /* Ajouter de l'espace entre les liens */
+    text-decoration: none; /* Supprimer le soulignement des liens */
+    color: #007bff; /* Couleur des liens, modifiable selon vos préférences */
+    padding: 8px 16px; /* Padding autour des liens pour un meilleur aspect */
+    border-radius: 5px; /* Arrondir les coins des liens (optionnel) */
+}
+
+/* Style des liens au survol */
+.navbar a:hover {
+    background-color: #ddd; /* Couleur de fond au survol */
+    color: #0056b3; /* Couleur du texte au survol */
+}

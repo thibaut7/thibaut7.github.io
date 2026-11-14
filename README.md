@@ -11,7 +11,7 @@ Aucune compilation à faire : GitHub construit le site à chaque push.
 |---|---|
 | Changer mon accroche, la ligne stage, mon e-mail, LinkedIn, CV, portrait | `_config.yml` |
 | Changer un texte de l'interface (menus, titres) en anglais ou en français | `_data/i18n.yml` |
-| Brancher la carte des visiteurs | `_config.yml` → `carte_visiteurs` |
+| Carte des visiteurs (identifiant MapMyVisitors) | `_config.yml` → `carte_visiteurs_id` |
 | Ajouter / modifier un projet | `_data/projets.yml` (+ média dans `assets/media/`) |
 | Ajouter une lecture | `_data/lectures.yml` |
 | Publier un écrit | un fichier dans `_posts/` → voir **GUIDE-ECRITS.md** |

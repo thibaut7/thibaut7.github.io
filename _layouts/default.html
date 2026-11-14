@@ -49,7 +49,10 @@
 {{ content }}
 <footer class="site-foot">
 <span>© {{ site.time | date: "%Y" }} {{ site.title }}</span>
-<a href="{{ visitors_url | relative_url }}">{{ t.visitors }}</a>
+<a class="site-foot__visitors" href="{{ visitors_url | relative_url }}">
+{% if site.carte_visiteurs_id and site.carte_visiteurs_id != "" and page.layout != "visitors" %}<img src="https://mapmyvisitors.com/map.png?d={{ site.carte_visiteurs_id }}&cl=ffffff" alt="" width="110" loading="eager">{% endif %}
+<span>{{ t.visitors }}</span>
+</a>
 </footer>
 </div>
 <script>

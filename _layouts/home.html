@@ -18,6 +18,9 @@ layout: default
 {% else %}
 <div class="hero__portrait hero__portrait--vide" aria-hidden="true">{{ site.title | slice: 0 }}</div>
 {% endif %}
+{% assign cv = site.cv[lang] | default: site.cv %}{% if cv and cv != "" %}
+<a class="bouton-cv" href="{{ cv | prepend: '/' | relative_url }}" download>{{ t.cv_download }}</a>
+{% endif %}
 {% include citation.html cle="portrait" lang=lang classe="citation--portrait" %}
 </div>
 </header>
@@ -91,7 +94,7 @@ layout: default
 <p class="liens liens--contact">
 {% if site.github != "" %}<a href="{{ site.github }}">GitHub</a>{% endif %}
 {% if site.linkedin != "" %}<a href="{{ site.linkedin }}">LinkedIn</a>{% endif %}
-{% if site.cv != "" %}<a href="{{ site.cv | prepend: '/' | relative_url }}">CV</a>{% endif %}
+{% if cv and cv != "" %}<a href="{{ cv | prepend: '/' | relative_url }}" download>CV</a>{% endif %}
 </p>
 </div>
 </section>

@@ -9,6 +9,7 @@ en:
   reading: Reading
   contact: Contact
   code: code
+  cv_download: "Download my CV"
   no_writing: "First pieces coming soon."
   all_writing: "← all writing"
   reading_now: "reading"
@@ -39,6 +40,7 @@ fr:
   reading: Lectures
   contact: Contact
   code: code
+  cv_download: "Télécharger mon CV"
   no_writing: "Les premiers textes arrivent bientôt."
   all_writing: "← tous les écrits"
   reading_now: "en cours"

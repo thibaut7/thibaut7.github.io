@@ -222,3 +222,12 @@ a:focus-visible { outline: 2px solid var(--encre); outline-offset: 3px; }
 html[lang="fr"] .citation--portrait .citation__texte p::before { content: "« "; }
 html[lang="fr"] .citation--portrait .citation__texte p::after { content: " »"; }
 .citation--portrait .citation__auteur { margin: 0.5rem 0 0; }
+
+/* Bouton CV */
+.bouton-cv {
+  display: inline-flex; align-items: center; gap: 0.5rem; min-height: 44px;
+  padding: 0.35rem 1.3rem; border: 1px solid var(--encre); border-radius: 999px;
+  font-style: italic; font-size: 1.1rem; text-decoration: none;
+}
+.bouton-cv::before { content: "↓"; font-style: normal; }
+.bouton-cv:hover { background: var(--encre); color: var(--papier); }

@@ -48,6 +48,7 @@
   description:
     en: "Detect and track vehicles in street footage: every car gets a box that follows it frame after frame."
     fr: "Détecter et suivre des véhicules dans une vidéo de rue : chaque voiture est encadrée et suivie d'image en image."
+  technos: "Python · YOLO · ByteTrack · OpenCV"
   lien: "https://gitlab.com/komilo/tracking-d-objet-dans-un-flux-video"
   visuel:
     type: video

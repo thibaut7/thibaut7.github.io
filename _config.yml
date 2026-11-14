@@ -43,8 +43,8 @@ description:
 # ── Carte des visiteurs (Supabase) ───────────────────────────
 # URL du projet et clé « publishable » (ou « anon ») : faites pour être publiques.
 # Vides = pas de suivi, la page Visitors affiche « bientôt ».
-supabase_url: ""
-supabase_cle: ""
+supabase_url: "https://nvvpszewsoupcqezdbdl.supabase.co"
+supabase_cle: "sb_publishable_dc90eNj1yeCvad9va9IYPA_1Ns0wepj"
 
 # ── Écrits ───────────────────────────────────────────────────
 # Chaque fichier de _posts/ devient une page à l'adresse /writing/<titre>/

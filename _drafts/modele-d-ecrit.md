@@ -1,6 +1,7 @@
 ---
 title: "Le titre de ton texte"
 date: 2026-11-20
+lang: fr
 categorie: essai
 resume: "Une phrase qui donne envie de lire. Elle s'affiche sous le titre, sur la page d'accueil."
 ---

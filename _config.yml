@@ -8,13 +8,18 @@ title: "Komlan Thibaut Bassa"
 # Le nom tel qu'il s'affiche en grand (<br> = retour à la ligne)
 nom_affiche: "Komlan Thibaut<br>Bassa"
 initiales: "K. T. B."
-lang: fr
+# Langue principale du site : anglais. La version française est sous /fr/.
+lang: en
 timezone: Europe/Paris
 
-# Phrase d'accroche sous ton nom (à compléter)
-accroche: "J'étudie [ton domaine], je construis des choses et j'écris pour comprendre."
-# Ligne sur le stage (à compléter ; laisse vide "" pour la masquer)
-stage: "Disponible pour un stage — [période, ville ou à distance]."
+# Phrase d'accroche sous ton nom (à compléter, en anglais et en français)
+accroche:
+  en: "I study [your field], I build things and I write to understand."
+  fr: "J'étudie [ton domaine], je construis des choses et j'écris pour comprendre."
+# Ligne sur le stage (à compléter ; mets "" pour la masquer)
+stage:
+  en: "Open to an internship — [period, city or remote]."
+  fr: "Disponible pour un stage — [période, ville ou à distance]."
 
 # Portrait : soit un lien complet vers une image (ici ta photo GitHub,
 # qui suit automatiquement tes changements), soit le nom d'un fichier
@@ -28,17 +33,25 @@ linkedin: ""                    # lien complet vers ton profil
 cv: ""                          # ex. "assets/cv.pdf" (mets le PDF dans assets/)
 
 # Description pour Google et les aperçus de liens
-description: "Portfolio de Komlan Thibaut Bassa : projets, écrits et lectures."
+description:
+  en: "Portfolio of Komlan Thibaut Bassa: projects, writing and reading."
+  fr: "Portfolio de Komlan Thibaut Bassa : projets, écrits et lectures."
+
+# ── Carte des visiteurs ──────────────────────────────────────
+# Colle ici, entre guillemets simples, le code donné par mapmyvisitors.com.
+# Vide = la page Visitors affiche « la carte apparaîtra ici bientôt ».
+carte_visiteurs: ""
 
 # ── Écrits ───────────────────────────────────────────────────
-# Chaque fichier de _posts/ devient une page à l'adresse /ecrits/<titre>/
-permalink: /ecrits/:title/
+# Chaque fichier de _posts/ devient une page à l'adresse /writing/<titre>/
+permalink: /writing/:title/
 defaults:
   - scope:
       path: ""
       type: posts
     values:
       layout: ecrit
+      lang: en    # mets "lang: fr" dans l'en-tête d'un écrit en français
 markdown: kramdown
 kramdown:
   input: GFM

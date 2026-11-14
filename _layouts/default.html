@@ -1,10 +1,34 @@
+{%- assign lang = page.lang | default: site.lang | default: "en" -%}
+{%- assign t = site.data.i18n[lang] -%}
+{%- if lang == "fr" -%}
+  {%- assign home_url = "/fr/" -%}{%- assign visitors_url = "/fr/visiteurs/" -%}
+  {%- assign other_lang = "en" -%}{%- assign other_home = "/" -%}
+{%- else -%}
+  {%- assign home_url = "/" -%}{%- assign visitors_url = "/visitors/" -%}
+  {%- assign other_lang = "fr" -%}{%- assign other_home = "/fr/" -%}
+{%- endif -%}
+{%- assign alt_url = page.alt | default: other_home -%}
 <!doctype html>
-<html lang="{{ site.lang | default: 'fr' }}">
+<html lang="{{ lang }}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-<meta name="description" content="{% if page.resume %}{{ page.resume | strip_html | escape }}{% else %}{{ site.description | escape }}{% endif %}">
+<meta name="description" content="{% if page.resume %}{{ page.resume | strip_html | escape }}{% else %}{{ site.description[lang] | escape }}{% endif %}">
+{% if page.alt %}<link rel="alternate" hreflang="{{ other_lang }}" href="{{ page.alt | absolute_url }}">{% endif %}
+{% if page.alt %}
+<script>
+/* Language: English by default. French-speaking browsers are sent to the
+   French version, unless the visitor chose a language with the switch. */
+(function () {
+  var here = "{{ lang }}", alt = "{{ page.alt | relative_url }}", pref = null;
+  try { pref = localStorage.getItem("lang"); } catch (e) {}
+  var browserFr = /^fr\b/i.test((navigator.languages && navigator.languages[0]) || navigator.language || "");
+  var want = pref || (browserFr ? "fr" : "en");
+  if (want !== here && (pref || here === "en")) location.replace(alt + location.hash);
+})();
+</script>
+{% endif %}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
@@ -12,16 +36,26 @@
 </head>
 <body>
 <div class="page">
-<nav class="nav" aria-label="Navigation principale">
-<a class="nav__sign" href="{{ '/' | relative_url }}">{{ site.initiales }}</a>
+<nav class="nav" aria-label="{% if lang == 'fr' %}Navigation principale{% else %}Main navigation{% endif %}">
+<a class="nav__sign" href="{{ home_url | relative_url }}">{{ site.initiales }}</a>
 <div class="nav__links">
-<a href="{{ '/#projets' | relative_url }}">projets</a>
-<a href="{{ '/#ecrits' | relative_url }}">écrits</a>
-<a href="{{ '/#lectures' | relative_url }}">lectures</a>
-<a href="{{ '/#contact' | relative_url }}">contact</a>
+<a href="{{ home_url | append: '#projets' | relative_url }}">{{ t.nav_projects }}</a>
+<a href="{{ home_url | append: '#ecrits' | relative_url }}">{{ t.nav_writing }}</a>
+<a href="{{ home_url | append: '#lectures' | relative_url }}">{{ t.nav_reading }}</a>
+<a href="{{ home_url | append: '#contact' | relative_url }}">{{ t.nav_contact }}</a>
+<a class="nav__lang" href="{{ alt_url | relative_url }}" hreflang="{{ other_lang }}" lang="{{ other_lang }}" data-lang="{{ other_lang }}" title="{{ t.switch_label }}">{{ t.switch_short }}</a>
 </div>
 </nav>
 {{ content }}
+<footer class="site-foot">
+<span>© {{ site.time | date: "%Y" }} {{ site.title }}</span>
+<a href="{{ visitors_url | relative_url }}">{{ t.visitors }}</a>
+</footer>
 </div>
+<script>
+document.querySelectorAll("[data-lang]").forEach(function (a) {
+  a.addEventListener("click", function () { try { localStorage.setItem("lang", a.dataset.lang); } catch (e) {} });
+});
+</script>
 </body>
 </html>

@@ -1,3 +1,5 @@
+{%- assign _t = site.data.i18n[include.lang] | default: site.data.i18n.en -%}
 {%- assign _m = include.date | date: "%m" | plus: 0 | minus: 1 -%}
 {%- assign _j = include.date | date: "%d" | plus: 0 -%}
-{{- _j }} {{ site.data.mois[_m] }} {{ include.date | date: "%Y" -}}
+{%- assign _y = include.date | date: "%Y" -%}
+{%- if _t.date_format == "mdy" -%}{{ _t.months[_m] }} {{ _j }}, {{ _y }}{%- else -%}{{ _j }} {{ _t.months[_m] }} {{ _y }}{%- endif -%}

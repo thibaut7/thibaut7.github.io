@@ -1,57 +1,77 @@
 # Projets affichés sur la page d'accueil, dans cet ordre.
+# Chaque texte existe en anglais (en) et en français (fr).
 #
-# visuel → ce qui s'affiche dans le carré :
+# visuel → ce qui s'affiche dans la vignette :
 #   type: video   + fichier (mp4 court, muet) + affiche (image de départ)
 #   type: image   + fichier (jpg/png/webp/svg)
-#   type: schema  + etapes (liste de mots, dessinée comme un petit schéma)
 # Les fichiers vont dans assets/media/.
 
 - titre: "DALL-E-Bot, reproduction"
-  statut: "en cours"
-  description: "Projet VA50 « imagination visuelle » : un modèle de diffusion imagine la disposition de la table, le robot la réalise."
+  statut:
+    en: "in progress"
+    fr: "en cours"
+  description:
+    en: "VA50 “visual imagination” project: a diffusion model imagines how the table should be arranged, and the robot carries it out."
+    fr: "Projet VA50 « imagination visuelle » : un modèle de diffusion imagine la disposition de la table, le robot la réalise."
   technos: "Python · ROS · Gazebo · diffusion · CLIP"
   lien: "https://github.com/va50-imagination-visuelle/dalle-bot-reproduction"
   visuel:
     type: video
     fichier: "dallebot-loop.mp4"
     affiche: "dallebot-poster.jpg"
-    texte_alt: "Simulation Gazebo : le robot TIAGo approche la fourchette posée sur la table"
+    texte_alt:
+      en: "Gazebo simulation: the TIAGo robot reaches for the fork on the table"
+      fr: "Simulation Gazebo : le robot TIAGo approche la fourchette posée sur la table"
   liens:
     - nom: code
       url: "https://github.com/va50-imagination-visuelle/dalle-bot-reproduction"
 
 - titre: "VoiceBridge"
-  description: "Parler à ses agents de code : transcription locale avec whisper.cpp, texte copié dans le presse-papiers."
+  description:
+    en: "Talk to your coding agents: local transcription with whisper.cpp, text copied straight to the clipboard."
+    fr: "Parler à ses agents de code : transcription locale avec whisper.cpp, texte copié dans le presse-papiers."
   technos: "Rust · whisper.cpp · Nix"
   lien: "https://github.com/thibaut7/voicebridge"
   visuel:
     type: image
     fichier: "voicebridge.svg"
-    texte_alt: "Illustration : un micro dont la voix devient du texte sur un écran"
+    texte_alt:
+      en: "Illustration: a microphone whose voice becomes text on a screen"
+      fr: "Illustration : un micro dont la voix devient du texte sur un écran"
   liens:
     - nom: code
       url: "https://github.com/thibaut7/voicebridge"
 
-- titre: "Tracking d'objet dans un flux vidéo"
-  description: "Détecter et suivre des véhicules dans une vidéo de rue : chaque voiture est encadrée et suivie d'image en image."
+- titre:
+    en: "Object tracking in a video stream"
+    fr: "Tracking d'objet dans un flux vidéo"
+  description:
+    en: "Detect and track vehicles in street footage: every car gets a box that follows it frame after frame."
+    fr: "Détecter et suivre des véhicules dans une vidéo de rue : chaque voiture est encadrée et suivie d'image en image."
   lien: "https://gitlab.com/komilo/tracking-d-objet-dans-un-flux-video"
   visuel:
     type: video
     fichier: "tracking-loop.mp4"
     affiche: "tracking-poster.jpg"
-    texte_alt: "Vidéo d'une rue où chaque voiture est entourée d'un cadre jaune qui la suit"
+    texte_alt:
+      en: "Street video where each car is framed by a yellow box that follows it"
+      fr: "Vidéo d'une rue où chaque voiture est entourée d'un cadre jaune qui la suit"
   liens:
     - nom: code
       url: "https://gitlab.com/komilo/tracking-d-objet-dans-un-flux-video"
 
 - titre: "MCQ Generator"
-  description: "Génère des QCM à partir d'un texte, avec l'API OpenAI et une interface Streamlit."
+  description:
+    en: "Generates multiple-choice quizzes from any text, using the OpenAI API and a Streamlit interface."
+    fr: "Génère des QCM à partir d'un texte, avec l'API OpenAI et une interface Streamlit."
   technos: "Python · OpenAI · Streamlit"
   lien: "https://github.com/thibaut7/mcqgenerator"
   visuel:
     type: image
     fichier: "mcq.svg"
-    texte_alt: "Illustration : une page de texte transformée en carte de QCM"
+    texte_alt:
+      en: "Illustration: a page of text turned into a quiz card"
+      fr: "Illustration : une page de texte transformée en carte de QCM"
   liens:
     - nom: code
       url: "https://github.com/thibaut7/mcqgenerator"

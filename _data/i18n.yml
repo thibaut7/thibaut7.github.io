@@ -1,0 +1,60 @@
+# Textes de l'interface, en anglais (en) et en français (fr).
+en:
+  nav_projects: projects
+  nav_writing: writing
+  nav_reading: reading
+  nav_contact: contact
+  projects: Projects
+  writing: Writing
+  reading: Reading
+  contact: Contact
+  code: code
+  no_writing: "First pieces coming soon."
+  all_writing: "← all writing"
+  reading_now: "reading"
+  read: "read"
+  contact_line: "An internship, a project, a book to recommend"
+  contact_fallback: "write to me."
+  visitors: Visitors
+  visitors_title: "Visitors"
+  visitors_intro: "Where readers of this site come from. Each dot is a visit, located by city or country — no names, no personal data."
+  visitors_soon: "The map will appear here soon."
+  back_home: "← back to the home page"
+  switch_label: "Français"
+  switch_short: "FR"
+  in_lang_fr: "in French"
+  in_lang_en: "in English"
+  portrait_alt: "Portrait of"
+  open_project: "Open the project"
+  months: [January, February, March, April, May, June, July, August, September, October, November, December]
+  date_format: "mdy"
+
+fr:
+  nav_projects: projets
+  nav_writing: écrits
+  nav_reading: lectures
+  nav_contact: contact
+  projects: Projets
+  writing: Écrits
+  reading: Lectures
+  contact: Contact
+  code: code
+  no_writing: "Les premiers textes arrivent bientôt."
+  all_writing: "← tous les écrits"
+  reading_now: "en cours"
+  read: "lu"
+  contact_line: "Un stage, un projet, une lecture à me conseiller"
+  contact_fallback: "écris-moi."
+  visitors: Visiteurs
+  visitors_title: "Visiteurs"
+  visitors_intro: "D'où viennent les lecteurs de ce site. Chaque point est une visite, située par ville ou par pays — sans nom ni donnée personnelle."
+  visitors_soon: "La carte apparaîtra ici bientôt."
+  back_home: "← retour à l'accueil"
+  switch_label: "English"
+  switch_short: "EN"
+  in_lang_fr: "en français"
+  in_lang_en: "en anglais"
+  portrait_alt: "Portrait de"
+  open_project: "Ouvrir le projet"
+  months: [janvier, février, mars, avril, mai, juin, juillet, août, septembre, octobre, novembre, décembre]
+  date_format: "dmy"

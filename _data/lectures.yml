@@ -1,12 +1,15 @@
 # Lectures, de la plus récente à la plus ancienne.
-# statut : "en cours" ou "lu" (avec quand, ex. "octobre 2026")
-# note : facultatif, une ligne sur ce que tu en retiens.
+# statut : "en_cours" ou "lu"
+# quand : facultatif, en anglais et en français
+# note : facultatif, une ligne sur ce que tu en retiens (en / fr)
 
 - titre: "Designing Data-Intensive Applications"
   auteurs: "Martin Kleppmann"
-  statut: "en cours"
+  statut: en_cours
 
 - titre: "The Pragmatic Programmer"
   auteurs: "David Thomas & Andrew Hunt"
-  statut: "lu"
-  quand: "octobre 2026"
+  statut: lu
+  quand:
+    en: "October 2026"
+    fr: "octobre 2026"

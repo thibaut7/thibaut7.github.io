@@ -1,6 +1,8 @@
 # Portfolio — Komlan Thibaut Bassa
 
 Site personnel (projets, écrits, lectures), construit avec Jekyll et hébergé sur GitHub Pages.
+En anglais par défaut (`/`), en français sous `/fr/` : les navigateurs réglés en français y sont
+envoyés automatiquement, et le bouton EN/FR mémorise le choix du visiteur.
 Aucune compilation à faire : GitHub construit le site à chaque push.
 
 ## Où changer quoi
@@ -8,6 +10,8 @@ Aucune compilation à faire : GitHub construit le site à chaque push.
 | Je veux… | Fichier |
 |---|---|
 | Changer mon accroche, la ligne stage, mon e-mail, LinkedIn, CV, portrait | `_config.yml` |
+| Changer un texte de l'interface (menus, titres) en anglais ou en français | `_data/i18n.yml` |
+| Brancher la carte des visiteurs | `_config.yml` → `carte_visiteurs` |
 | Ajouter / modifier un projet | `_data/projets.yml` (+ média dans `assets/media/`) |
 | Ajouter une lecture | `_data/lectures.yml` |
 | Publier un écrit | un fichier dans `_posts/` → voir **GUIDE-ECRITS.md** |
@@ -36,11 +40,12 @@ et ouvre http://localhost:4000 (`--drafts` affiche aussi les brouillons).
 
 ```
 _config.yml          réglages et infos personnelles
-_data/               projets, lectures, noms des mois
+_data/               projets, lectures, textes EN/FR (i18n.yml)
 _posts/              tes écrits publiés (AAAA-MM-JJ-titre.md)
 _drafts/             brouillons + modèle d'écrit
 _layouts/            gabarits (page, écrit)
 _includes/date.html  affichage des dates en français
 assets/              CSS, vidéos, images
-index.html           la page d'accueil
+index.html, fr/       accueil en anglais et en français
+visitors/, fr/visiteurs/  page de la carte des visiteurs
 ```

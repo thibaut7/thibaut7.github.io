@@ -65,7 +65,7 @@ a:focus-visible { outline: 2px solid var(--encre); outline-offset: 3px; }
 
 /* Sections : titre calligraphique à gauche, contenu à droite */
 .section { display: flex; flex-wrap: wrap; gap: 2rem; padding: 3rem 0; border-top: 1px solid var(--encre); }
-.section--last { padding-bottom: 5rem; }
+.section--last { padding-bottom: 4rem; }
 .section__title {
   flex: 1 1 200px; margin: 0; font-family: var(--calli); font-weight: 400;
   font-size: 3.6rem; line-height: 1;
@@ -168,3 +168,29 @@ a:focus-visible { outline: 2px solid var(--encre); outline-offset: 3px; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
+/* Langue */
+.nav__lang {
+  font-style: normal; font-size: 0.85rem; letter-spacing: 0.14em;
+  border: 1px solid var(--encre); border-radius: 999px; padding: 0 0.6rem;
+  text-decoration: none;
+}
+.nav__lang:hover { background: var(--encre); color: var(--papier); }
+
+/* Pied de page */
+.site-foot {
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem;
+  padding: 1.6rem 0 2.4rem; border-top: 1px solid var(--encre);
+  font-size: 1rem; font-style: italic; color: var(--gris);
+}
+
+/* Page Visiteurs */
+.visiteurs { max-width: 820px; margin: 0 auto; padding: 4rem 0 5rem; }
+.visiteurs__titre { margin: 0; font-family: var(--calli); font-weight: 400; font-size: clamp(3rem, 7vw, 4.4rem); line-height: 1; }
+.visiteurs__intro { margin: 1rem 0 2.5rem; max-width: 600px; color: var(--gris); }
+.visiteurs__carte {
+  border: 1px solid var(--encre); border-radius: var(--arrondi); background: var(--fond-vignette);
+  padding: 1.2rem; min-height: 240px; display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+}
+.visiteurs__carte img, .visiteurs__carte iframe, .visiteurs__carte canvas { max-width: 100%; height: auto; }

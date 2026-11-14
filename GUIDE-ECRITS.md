@@ -2,7 +2,7 @@
 
 Un écrit = **un fichier Markdown dans le dossier `_posts/`**.
 Dès que le fichier est sur GitHub, le site se reconstruit tout seul (1 à 2 minutes) :
-le texte apparaît dans la partie **Écrits** de l'accueil, avec sa date, et il a sa propre page.
+le texte apparaît dans la partie **Writing / Écrits** de l'accueil (versions anglaise et française), avec sa date, et il a sa propre page.
 
 ## 1. Le nom du fichier
 
@@ -12,7 +12,7 @@ _posts/AAAA-MM-JJ-titre-court.md
 
 - `AAAA-MM-JJ` : la date du texte (ex. `2026-11-20`).
 - `titre-court` : en minuscules, sans accents ni espaces, mots séparés par des tirets.
-  Il devient l'adresse de la page : `…/ecrits/titre-court/`.
+  Il devient l'adresse de la page : `…/writing/titre-court/`.
 
 Exemple : `_posts/2026-11-20-pourquoi-j-ecris.md`
 
@@ -26,6 +26,7 @@ Tout en haut du fichier, entre deux lignes de trois tirets :
 ---
 title: "Pourquoi j'écris"
 date: 2026-11-20
+lang: fr
 categorie: essai
 resume: "Une phrase qui donne envie de lire."
 ---
@@ -34,7 +35,8 @@ resume: "Une phrase qui donne envie de lire."
 | Champ | Obligatoire | Rôle |
 |---|---|---|
 | `title` | oui | Le titre, entre guillemets |
-| `date` | conseillé | La date affichée (« 20 novembre 2026 »). Sinon, celle du nom du fichier |
+| `date` | conseillé | La date affichée (« 20 novembre 2026 » / « November 20, 2026 »). Sinon, celle du nom du fichier |
+| `lang` | conseillé | Langue du texte : `fr` ou `en` (par défaut `en`). Le texte s'affiche sur les deux versions du site, avec la mention « in French » ou « en anglais » quand la langue diffère |
 | `categorie` | non | Un mot affiché à côté de la date : essai, note, nouvelle… |
 | `resume` | non | La phrase sous le titre. Sans elle, le site prend le début du texte |
 

@@ -49,12 +49,25 @@
 {{ content }}
 <footer class="site-foot">
 <span>© {{ site.time | date: "%Y" }} {{ site.title }}</span>
-<a class="site-foot__visitors" href="{{ visitors_url | relative_url }}">
-{% if site.carte_visiteurs_id and site.carte_visiteurs_id != "" and page.layout != "visitors" %}<img src="https://mapmyvisitors.com/map.png?d={{ site.carte_visiteurs_id }}&cl=ffffff" alt="" width="110" loading="eager">{% endif %}
-<span>{{ t.visitors }}</span>
-</a>
+<a class="site-foot__visitors" href="{{ visitors_url | relative_url }}">{{ t.visitors }}</a>
 </footer>
 </div>
+{% if site.supabase_url != "" and site.supabase_cle != "" %}
+<script>
+window.VISITES = {
+  url: {{ site.supabase_url | jsonify }},
+  cle: {{ site.supabase_cle | jsonify }},
+  fond: {{ '/assets/carte-monde.svg' | relative_url | jsonify }},
+  textes: {
+    total: {{ t.visitors_total | jsonify }},
+    vide: {{ t.visitors_empty | jsonify }},
+    erreur: {{ t.visitors_error | jsonify }},
+    carte: {{ t.visitors_map | jsonify }}
+  }
+};
+</script>
+<script src="{{ '/assets/js/visites.js' | relative_url }}" defer></script>
+{% endif %}
 <script>
 document.querySelectorAll("[data-lang]").forEach(function (a) {
   a.addEventListener("click", function () { try { localStorage.setItem("lang", a.dataset.lang); } catch (e) {} });

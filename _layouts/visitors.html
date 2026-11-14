@@ -8,12 +8,13 @@ layout: default
 <p class="lecture-page__retour"><a href="{{ home_url | relative_url }}">{{ t.back_home }}</a></p>
 <h1 class="visiteurs__titre">{{ t.visitors_title }}</h1>
 <p class="visiteurs__intro">{{ t.visitors_intro }}</p>
-<div class="visiteurs__carte">
-{% if site.carte_visiteurs_id and site.carte_visiteurs_id != "" %}
-<script type="text/javascript" id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?d={{ site.carte_visiteurs_id }}&cl=ffffff&w=a"></script>
-<noscript><a href="{{ site.carte_visiteurs_page }}"><img src="https://mapmyvisitors.com/map.png?d={{ site.carte_visiteurs_id }}&cl=ffffff" alt="{{ t.visitors_title }}"></a></noscript>
+{% if site.supabase_url != "" and site.supabase_cle != "" %}
+<p class="visiteurs__resume" id="resume-visites" aria-live="polite"></p>
+<div class="visiteurs__carte" id="carte-visites"></div>
+<h2 class="visiteurs__soustitre">{{ t.visitors_countries }}</h2>
+<ol class="pays-visites" id="pays-visites"></ol>
 {% else %}
-<p class="vide">{{ t.visitors_soon }}</p>
+<div class="visiteurs__carte"><p class="vide">{{ t.visitors_soon }}</p></div>
 {% endif %}
-</div>
+<p class="visiteurs__note">{{ t.visitors_privacy }}</p>
 </section>

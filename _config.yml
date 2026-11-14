@@ -40,11 +40,11 @@ description:
   en: "Portfolio of Komlan Thibaut Bassa: projects, writing and reading."
   fr: "Portfolio de Komlan Thibaut Bassa : projets, écrits et lectures."
 
-# ── Carte des visiteurs (mapmyvisitors.com) ──────────────────
-# Identifiant de ta carte : la valeur après « d= » dans le code MapMyVisitors.
-# Vide = pas de carte (la page Visitors affiche « bientôt »).
-carte_visiteurs_id: "naPeHMB3RfMIfnrcQpVnp7w14Rr3qoXXUcR3_PNFbXM"
-carte_visiteurs_page: "https://mapmyvisitors.com/web/1c9hf"
+# ── Carte des visiteurs (Supabase) ───────────────────────────
+# URL du projet et clé « publishable » (ou « anon ») : faites pour être publiques.
+# Vides = pas de suivi, la page Visitors affiche « bientôt ».
+supabase_url: ""
+supabase_cle: ""
 
 # ── Écrits ───────────────────────────────────────────────────
 # Chaque fichier de _posts/ devient une page à l'adresse /writing/<titre>/

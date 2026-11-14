@@ -186,20 +186,27 @@ a:focus-visible { outline: 2px solid var(--encre); outline-offset: 3px; }
 }
 
 .site-foot { align-items: center; }
-.site-foot__visitors { display: inline-flex; align-items: center; gap: 0.7rem; }
-.site-foot__visitors img { width: 110px; height: auto; border: 1px solid var(--filet); border-radius: var(--arrondi); background: #fff; }
 
 /* Page Visiteurs */
 .visiteurs { max-width: 820px; margin: 0 auto; padding: 4rem 0 5rem; }
 .visiteurs__titre { margin: 0; font-family: var(--calli); font-weight: 400; font-size: clamp(3rem, 7vw, 4.4rem); line-height: 1; }
 .visiteurs__intro { margin: 1rem 0 2.5rem; max-width: 600px; color: var(--gris); }
 .visiteurs__carte {
-  border: 1px solid var(--encre); border-radius: var(--arrondi); background: var(--fond-vignette);
-  padding: 1.2rem; min-height: 240px; display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--encre); border-radius: var(--arrondi); background: var(--papier);
+  padding: 1rem; min-height: 200px; display: flex; align-items: center; justify-content: center;
   overflow: hidden;
 }
-.visiteurs__carte { background: #fff; }
-.visiteurs__carte img, .visiteurs__carte iframe, .visiteurs__carte canvas, .visiteurs__carte svg { max-width: 100%; height: auto; }
+.visiteurs__carte svg { display: block; width: 100%; height: auto; }
+.visiteurs__carte .terre { fill: #e2dccd; }
+.visiteurs__carte .frontieres { fill: none; stroke: var(--papier); stroke-width: 0.6; }
+.visiteurs__carte .points circle { fill: var(--encre); fill-opacity: 0.72; stroke: var(--papier); stroke-width: 1; }
+.visiteurs__carte .points circle:hover { fill: #d9734e; fill-opacity: 1; }
+.visiteurs__resume { margin: 0 0 1rem; font-size: 1rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gris); min-height: 1.5em; }
+.visiteurs__soustitre { margin: 2.5rem 0 0.8rem; font-family: var(--calli); font-weight: 400; font-size: 2.6rem; line-height: 1; }
+.pays-visites { list-style: none; margin: 0; padding: 0; columns: 2 220px; column-gap: 2.5rem; }
+.pays-visites li { display: flex; justify-content: space-between; gap: 1rem; padding: 0.35rem 0; border-bottom: 1px solid var(--filet); break-inside: avoid; }
+.pays-visites__n { color: var(--gris); font-variant-numeric: tabular-nums; }
+.visiteurs__note { margin: 2rem 0 0; font-size: 1rem; font-style: italic; color: var(--gris); }
 
 /* Citations */
 .citation { margin: 0 0 2.2rem; max-width: 680px; }

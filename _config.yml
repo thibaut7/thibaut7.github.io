@@ -1,0 +1,52 @@
+# ─────────────────────────────────────────────────────────────
+#  Réglages du site — c'est ici que tu changes tes informations.
+#  Après une modification de ce fichier, GitHub reconstruit le
+#  site tout seul (1 à 2 minutes).
+# ─────────────────────────────────────────────────────────────
+
+title: "Komlan Thibaut Bassa"
+# Le nom tel qu'il s'affiche en grand (<br> = retour à la ligne)
+nom_affiche: "Komlan Thibaut<br>Bassa"
+initiales: "K. T. B."
+lang: fr
+timezone: Europe/Paris
+
+# Phrase d'accroche sous ton nom (à compléter)
+accroche: "J'étudie [ton domaine], je construis des choses et j'écris pour comprendre."
+# Ligne sur le stage (à compléter ; laisse vide "" pour la masquer)
+stage: "Disponible pour un stage — [période, ville ou à distance]."
+
+# Portrait : mets ta photo dans assets/img/ puis écris son nom ici,
+# par exemple "portrait.jpg". Vide = un médaillon avec ton initiale.
+portrait: ""
+
+# Contact
+email: ""                       # ex. "prenom.nom@exemple.com"
+github: "https://github.com/thibaut7"
+linkedin: ""                    # lien complet vers ton profil
+cv: ""                          # ex. "assets/cv.pdf" (mets le PDF dans assets/)
+
+# Description pour Google et les aperçus de liens
+description: "Portfolio de Komlan Thibaut Bassa : projets, écrits et lectures."
+
+# ── Écrits ───────────────────────────────────────────────────
+# Chaque fichier de _posts/ devient une page à l'adresse /ecrits/<titre>/
+permalink: /ecrits/:title/
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: ecrit
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    disable: true
+
+exclude:
+  - README.md
+  - GUIDE-ECRITS.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

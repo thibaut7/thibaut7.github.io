@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<article class="lecture-page">
+<p class="lecture-page__retour"><a href="{{ '/#ecrits' | relative_url }}">← tous les écrits</a></p>
+<header class="lecture-page__tete">
+<p class="ecrit__meta"><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{% include date.html date=page.date %}</time>{% if page.categorie %} · {{ page.categorie }}{% endif %}</p>
+<h1 class="lecture-page__titre">{{ page.title }}</h1>
+{% if page.resume %}<p class="lecture-page__chapeau">{{ page.resume }}</p>{% endif %}
+</header>
+<div class="prose">
+{{ content }}
+</div>
+<p class="lecture-page__fin" aria-hidden="true">{{ site.initiales }}</p>
+</article>

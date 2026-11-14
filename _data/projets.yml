@@ -1,0 +1,54 @@
+# Projets affichés sur la page d'accueil, dans cet ordre.
+#
+# visuel → ce qui s'affiche dans le carré :
+#   type: video   + fichier (mp4 court, muet) + affiche (image de départ)
+#   type: image   + fichier (jpg/png/webp)
+#   type: schema  + etapes (liste de mots, dessinée comme un petit schéma)
+# Les fichiers vont dans assets/media/.
+
+- titre: "DALL-E-Bot, reproduction"
+  statut: "en cours"
+  description: "Projet VA50 « imagination visuelle » : un modèle de diffusion imagine la disposition de la table, le robot la réalise."
+  technos: "Python · ROS · Gazebo · diffusion · CLIP"
+  lien: "https://github.com/va50-imagination-visuelle/dalle-bot-reproduction"
+  visuel:
+    type: video
+    fichier: "dallebot-loop.mp4"
+    affiche: "dallebot-poster.jpg"
+    texte_alt: "Simulation Gazebo : le robot TIAGo approche la fourchette posée sur la table"
+  liens:
+    - nom: code
+      url: "https://github.com/va50-imagination-visuelle/dalle-bot-reproduction"
+
+- titre: "VoiceBridge"
+  description: "Parler à ses agents de code : transcription locale avec whisper.cpp, texte copié dans le presse-papiers."
+  technos: "Rust · whisper.cpp · Nix"
+  lien: "https://github.com/thibaut7/voicebridge"
+  visuel:
+    type: schema
+    etapes: ["voix", "whisper.cpp", "presse-papiers"]
+  liens:
+    - nom: code
+      url: "https://github.com/thibaut7/voicebridge"
+
+- titre: "Modern Lakehouse"
+  description: "Un data lakehouse complet en local : ingestion, tables Iceberg, traitements Spark, gouvernance et supervision."
+  technos: "Docker · Spark · Iceberg · Grafana"
+  lien: "https://github.com/thibaut7/modern_lakehouse"
+  visuel:
+    type: schema
+    etapes: ["NiFi", "Iceberg · MinIO", "Spark", "Postgres"]
+  liens:
+    - nom: code
+      url: "https://github.com/thibaut7/modern_lakehouse"
+
+- titre: "MCQ Generator"
+  description: "Génère des QCM à partir d'un texte, avec l'API OpenAI et une interface Streamlit."
+  technos: "Python · OpenAI · Streamlit"
+  lien: "https://github.com/thibaut7/mcqgenerator"
+  visuel:
+    type: schema
+    etapes: ["texte", "OpenAI", "QCM"]
+  liens:
+    - nom: code
+      url: "https://github.com/thibaut7/mcqgenerator"

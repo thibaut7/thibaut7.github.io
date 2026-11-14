@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'fr' }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+<meta name="description" content="{% if page.resume %}{{ page.resume | strip_html | escape }}{% else %}{{ site.description | escape }}{% endif %}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+<div class="page">
+<nav class="nav" aria-label="Navigation principale">
+<a class="nav__sign" href="{{ '/' | relative_url }}">{{ site.initiales }}</a>
+<div class="nav__links">
+<a href="{{ '/#projets' | relative_url }}">projets</a>
+<a href="{{ '/#ecrits' | relative_url }}">écrits</a>
+<a href="{{ '/#lectures' | relative_url }}">lectures</a>
+<a href="{{ '/#contact' | relative_url }}">contact</a>
+</div>
+</nav>
+{{ content }}
+</div>
+</body>
+</html>

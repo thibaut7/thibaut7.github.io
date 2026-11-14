@@ -10,13 +10,14 @@ layout: default
 {% if site.stage != "" %}<p class="hero__note">{{ site.stage }}</p>{% endif %}
 </div>
 {% if site.portrait != "" %}
-<img class="hero__portrait" src="{{ '/assets/img/' | append: site.portrait | relative_url }}" alt="Portrait de {{ site.title }}">
+{% if site.portrait contains "://" %}{% assign portrait_src = site.portrait %}{% else %}{% assign portrait_src = '/assets/img/' | append: site.portrait | relative_url %}{% endif %}
+<img class="hero__portrait" src="{{ portrait_src }}" alt="Portrait de {{ site.title }}">
 {% else %}
 <div class="hero__portrait hero__portrait--vide" aria-hidden="true">{{ site.title | slice: 0 }}</div>
 {% endif %}
 </header>
 
-<section id="projets" class="section">
+<section id="projets" class="section section--plein">
 <h2 class="section__title">Projets</h2>
 <div class="section__body projets">
 {% for p in site.data.projets %}

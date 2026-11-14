@@ -27,18 +27,19 @@
   visuel:
     type: image
     fichier: "voicebridge.svg"
-    texte_alt: "Un micro, une onde sonore, puis des lignes de texte"
+    texte_alt: "Illustration : un micro dont la voix devient du texte sur un écran"
   liens:
     - nom: code
       url: "https://github.com/thibaut7/voicebridge"
 
 - titre: "Tracking d'objet dans un flux vidéo"
-  description: "Suivre un objet image après image dans un flux vidéo."
+  description: "Détecter et suivre des véhicules dans une vidéo de rue : chaque voiture est encadrée et suivie d'image en image."
   lien: "https://gitlab.com/komilo/tracking-d-objet-dans-un-flux-video"
   visuel:
-    type: image
-    fichier: "tracking.svg"
-    texte_alt: "Trois images d'un film où un objet encadré se déplace le long d'une trajectoire"
+    type: video
+    fichier: "tracking-loop.mp4"
+    affiche: "tracking-poster.jpg"
+    texte_alt: "Vidéo d'une rue où chaque voiture est entourée d'un cadre jaune qui la suit"
   liens:
     - nom: code
       url: "https://gitlab.com/komilo/tracking-d-objet-dans-un-flux-video"
@@ -50,7 +51,7 @@
   visuel:
     type: image
     fichier: "mcq.svg"
-    texte_alt: "Une page de texte transformée en questionnaire à cases"
+    texte_alt: "Illustration : une page de texte transformée en carte de QCM"
   liens:
     - nom: code
       url: "https://github.com/thibaut7/mcqgenerator"

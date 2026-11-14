@@ -16,9 +16,10 @@ accroche: "J'étudie [ton domaine], je construis des choses et j'écris pour com
 # Ligne sur le stage (à compléter ; laisse vide "" pour la masquer)
 stage: "Disponible pour un stage — [période, ville ou à distance]."
 
-# Portrait : mets ta photo dans assets/img/ puis écris son nom ici,
-# par exemple "portrait.jpg". Vide = un médaillon avec ton initiale.
-portrait: ""
+# Portrait : soit un lien complet vers une image (ici ta photo GitHub,
+# qui suit automatiquement tes changements), soit le nom d'un fichier
+# mis dans assets/img/ (ex. "portrait.jpg"). Vide = médaillon avec l'initiale.
+portrait: "https://avatars.githubusercontent.com/u/86150292?s=400&v=4"
 
 # Contact
 email: ""                       # ex. "prenom.nom@exemple.com"

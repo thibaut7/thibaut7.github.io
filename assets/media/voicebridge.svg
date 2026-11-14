@@ -1,20 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="24 38 352 264" fill="none" stroke="#141414" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-  <!-- micro -->
-  <rect x="58" y="104" width="34" height="62" rx="17"/>
-  <path d="M46 146 a29 29 0 0 0 58 0"/>
-  <line x1="75" y1="175" x2="75" y2="196"/>
-  <line x1="60" y1="196" x2="90" y2="196"/>
-  <!-- onde sonore -->
-  <path d="M122 150 v0 M132 142 v16 M142 128 v44 M152 138 v24 M162 118 v64 M172 134 v32 M182 144 v12 M192 130 v40 M202 146 v8"/>
-  <!-- flèche -->
-  <path d="M220 150 h34 m-9 -8 l9 8 l-9 8"/>
-  <!-- texte qui s'écrit -->
-  <rect x="270" y="98" width="96" height="104"/>
-  <g stroke-width="1.3">
-    <line x1="284" y1="120" x2="352" y2="120"/>
-    <line x1="284" y1="138" x2="344" y2="138"/>
-    <line x1="284" y1="156" x2="352" y2="156"/>
-    <line x1="284" y1="174" x2="318" y2="174"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#f3e3c3"/>
+  <circle cx="330" cy="62" r="70" fill="#f2b544" opacity="0.55"/>
+  <!-- écran d'ordinateur -->
+  <rect x="150" y="62" width="214" height="146" rx="10" fill="#1f2a44"/>
+  <rect x="160" y="80" width="194" height="118" rx="4" fill="#26355a"/>
+  <circle cx="166" cy="71" r="3" fill="#d9734e"/><circle cx="176" cy="71" r="3" fill="#f2b544"/><circle cx="186" cy="71" r="3" fill="#2a9d8f"/>
+  <g stroke-linecap="round" stroke-width="6">
+    <line x1="174" y1="98" x2="186" y2="98" stroke="#2a9d8f"/>
+    <line x1="194" y1="98" x2="290" y2="98" stroke="#f6efe2"/>
+    <line x1="174" y1="118" x2="186" y2="118" stroke="#2a9d8f"/>
+    <line x1="194" y1="118" x2="320" y2="118" stroke="#f6efe2"/>
+    <line x1="174" y1="138" x2="186" y2="138" stroke="#2a9d8f"/>
+    <line x1="194" y1="138" x2="262" y2="138" stroke="#f2b544"/>
   </g>
-  <line x1="326" y1="166" x2="326" y2="182" stroke-width="2"/>
+  <rect x="268" y="131" width="7" height="14" fill="#f6efe2"/>
+  <rect x="236" y="208" width="42" height="18" fill="#1f2a44"/>
+  <rect x="212" y="224" width="90" height="8" rx="4" fill="#1f2a44"/>
+  <!-- micro -->
+  <rect x="60" y="96" width="44" height="78" rx="22" fill="#d9734e"/>
+  <g stroke="#b85a38" stroke-width="3" stroke-linecap="round">
+    <line x1="70" y1="114" x2="94" y2="114"/><line x1="70" y1="126" x2="94" y2="126"/><line x1="70" y1="138" x2="94" y2="138"/>
+  </g>
+  <path d="M48 150 a34 34 0 0 0 68 0" fill="none" stroke="#1f2a44" stroke-width="6" stroke-linecap="round"/>
+  <line x1="82" y1="184" x2="82" y2="214" stroke="#1f2a44" stroke-width="6" stroke-linecap="round"/>
+  <line x1="62" y1="216" x2="102" y2="216" stroke="#1f2a44" stroke-width="6" stroke-linecap="round"/>
+  <!-- ondes vers l'écran -->
+  <g fill="none" stroke="#2a9d8f" stroke-width="5" stroke-linecap="round">
+    <path d="M118 118 q10 16 0 32"/>
+    <path d="M130 106 q18 28 0 56"/>
+  </g>
+  <!-- bulle -->
+  <path d="M40 40 h84 a12 12 0 0 1 12 12 v26 a12 12 0 0 1 -12 12 h-54 l-14 14 v-14 h-16 a12 12 0 0 1 -12 -12 v-26 a12 12 0 0 1 12 -12 z" fill="#f6efe2"/>
+  <g fill="#1f2a44"><circle cx="64" cy="65" r="5"/><circle cx="82" cy="65" r="5"/><circle cx="100" cy="65" r="5"/></g>
+  <!-- table -->
+  <rect x="0" y="246" width="400" height="54" fill="#e2c99c"/>
 </svg>

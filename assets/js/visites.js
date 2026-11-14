@@ -19,29 +19,37 @@
 
   function arrondi(x) { return Math.round(parseFloat(x) * 10) / 10; }
 
+  function ipwho() {
+    return fetch("https://ipwho.is/")
+      .then(function (r) { return r.json(); })
+      .then(function (g) {
+        if (!g.success) throw new Error("geo");
+        return { pays: g.country, code_pays: g.country_code, ville: g.city, lat: g.latitude, lon: g.longitude };
+      });
+  }
+
   function localiser() {
     return fetch("https://get.geojs.io/v1/ip/geo.json")
       .then(function (r) { if (!r.ok) throw r; return r.json(); })
       .then(function (g) {
-        return { pays: g.country, code_pays: g.country_code, ville: g.city, lat: g.latitude, lon: g.longitude };
+        var res = { pays: g.country, code_pays: g.country_code, ville: g.city, lat: g.latitude, lon: g.longitude };
+        if (res.ville) return res;
+        /* pas de ville : on la demande au second service, si le pays concorde */
+        return ipwho().then(function (h) {
+          if (h.code_pays === res.code_pays && h.ville) { res.ville = h.ville; res.lat = h.lat; res.lon = h.lon; }
+          return res;
+        }).catch(function () { return res; });
       })
-      .catch(function () {
-        return fetch("https://ipwho.is/")
-          .then(function (r) { return r.json(); })
-          .then(function (g) {
-            if (!g.success) throw new Error("geo");
-            return { pays: g.country, code_pays: g.country_code, ville: g.city, lat: g.latitude, lon: g.longitude };
-          });
-      });
+      .catch(ipwho);
   }
 
   function noter() {
-    if (navigator.webdriver) return;
+    if (navigator.webdriver) return Promise.resolve();
     try {
-      if (sessionStorage.getItem("visite-notee")) return;
+      if (sessionStorage.getItem("visite-notee")) return Promise.resolve();
       sessionStorage.setItem("visite-notee", "1");
     } catch (e) { /* stockage indisponible : on note quand même */ }
-    localiser().then(function (g) {
+    return localiser().then(function (g) {
       var lat = arrondi(g.lat), lon = arrondi(g.lon);
       if (!isFinite(lat) || !isFinite(lon)) return;
       return fetch(base + "/rest/v1/visites", {
@@ -65,9 +73,11 @@
     return repli || code || "?";
   }
 
-  function carte() {
+  function carte(attente) {
     var boite = document.getElementById("carte-visites");
     if (!boite) return;
+    /* on attend que la visite en cours soit enregistrée (3 s au plus) */
+    var pret = Promise.race([attente.catch(function () {}), new Promise(function (r) { setTimeout(r, 3000); })]);
     var langue = document.documentElement.lang === "fr" ? "fr" : "en";
     var t = cfg.textes || {};
     var NS = "http://www.w3.org/2000/svg";
@@ -80,6 +90,8 @@
       svg.setAttribute("aria-label", t.carte || "");
       latN = parseFloat(svg.getAttribute("data-lat-n"));
       k = svg.viewBox.baseVal.width / 360;
+      return pret;
+    }).then(function () {
       return fetch(base + "/rest/v1/rpc/carte_visites", { method: "POST", headers: entetes, body: "{}" });
     }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }).then(function (lignes) {
       lignes = lignes || [];
@@ -130,7 +142,7 @@
     });
   }
 
-  noter();
-  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", carte);
-  else carte();
+  var enregistrement = noter();
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", function () { carte(enregistrement); });
+  else carte(enregistrement);
 })();

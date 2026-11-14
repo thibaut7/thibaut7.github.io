@@ -1,0 +1,34 @@
+# Citations affichées sur le site, une par endroit.
+# texte : en anglais (en) et en français (fr) ; source facultative.
+
+portrait:
+  texte:
+    en: "The best way to make your dreams come true is to wake up."
+    fr: "La meilleure façon de réaliser ses rêves est de se réveiller."
+  auteur: "Paul Valéry"
+
+projets:
+  texte:
+    en: "If a man is called to be a street sweeper, he should sweep streets even as Michelangelo painted, or Beethoven composed music, or Shakespeare wrote poetry. He should sweep streets so well that all the hosts of heaven and earth will pause to say, “Here lived a great street sweeper who did his job well.”"
+    fr: "Si un homme est appelé à être balayeur de rues, il devrait balayer les rues comme Michel-Ange peignait, comme Beethoven composait sa musique ou comme Shakespeare écrivait sa poésie. Il devrait balayer les rues si bien que toutes les armées du ciel et de la terre s'arrêteraient pour dire : « Ici vécut un grand balayeur de rues qui faisait bien son travail. »"
+  auteur: "Martin Luther King Jr."
+
+ecrits:
+  texte:
+    en: "Your pain is the breaking of the shell that encloses your understanding. […] Much of your pain is self-chosen. It is the bitter potion by which the physician within you heals your sick self. Therefore trust the physician, and drink his remedy in silence and tranquillity."
+    fr: "Votre douleur est l'éclatement de la coquille qui enferme votre compréhension. […] Une grande part de votre douleur est choisie par vous-mêmes. C'est la potion amère par laquelle le médecin qui est en vous guérit votre moi malade. Faites donc confiance au médecin, et buvez son remède en silence et dans la tranquillité."
+  auteur: "Khalil Gibran"
+  source:
+    en: "The Prophet"
+    fr: "Le Prophète"
+
+lectures:
+  texte:
+    en: "Now all these things happened unto them for ensamples: and they are written for our admonition, upon whom the ends of the world are come."
+    fr: "Ces choses leur sont arrivées pour servir d'exemples, et elles ont été écrites pour notre instruction, à nous qui sommes parvenus à la fin des siècles."
+  auteur:
+    en: "1 Corinthians 10:11"
+    fr: "1 Corinthiens 10:11"
+  source:
+    en: "King James Version"
+    fr: "Louis Segond"

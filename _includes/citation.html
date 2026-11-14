@@ -1,0 +1,8 @@
+{%- assign _c = site.data.citations[include.cle] -%}
+{%- if _c -%}
+{%- if _c.auteur[include.lang] %}{% assign _a = _c.auteur[include.lang] %}{% else %}{% assign _a = _c.auteur %}{% endif -%}
+<figure class="citation{% if include.classe %} {{ include.classe }}{% endif %}">
+<blockquote class="citation__texte"><p>{{ _c.texte[include.lang] }}</p></blockquote>
+<figcaption class="citation__auteur">— {{ _a }}{% if _c.source %}, <cite>{{ _c.source[include.lang] }}</cite>{% endif %}</figcaption>
+</figure>
+{%- endif -%}

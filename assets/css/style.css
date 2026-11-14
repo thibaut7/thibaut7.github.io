@@ -53,8 +53,9 @@ a:focus-visible { outline: 2px solid var(--encre); outline-offset: 3px; }
 }
 .hero__lead { margin: 1.4rem 0 0; font-size: 1.35rem; font-weight: 500; max-width: 560px; }
 .hero__note { margin: 1rem 0 0; font-style: italic; color: var(--gris); }
+.hero__aside { flex: 0 1 260px; display: flex; flex-direction: column; align-items: center; gap: 1.6rem; }
 .hero__portrait {
-  flex: 0 1 180px; width: 180px; max-width: 180px; aspect-ratio: 1 / 1;
+  flex: 0 0 auto; width: 180px; max-width: 180px; aspect-ratio: 1 / 1;
   border-radius: 50%; border: 1px solid var(--encre);
   outline: 1px solid var(--encre); outline-offset: 6px; object-fit: cover;
 }
@@ -162,7 +163,7 @@ a:focus-visible { outline: 2px solid var(--encre); outline-offset: 3px; }
   .page { padding: 0 1.2rem; }
   .hero { padding: 3.5rem 0 3rem; }
   .section__title { font-size: 3rem; }
-  .hero__portrait { margin: 0 auto; }
+  .hero__aside { margin: 0 auto; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -199,3 +200,25 @@ a:focus-visible { outline: 2px solid var(--encre); outline-offset: 3px; }
 }
 .visiteurs__carte { background: #fff; }
 .visiteurs__carte img, .visiteurs__carte iframe, .visiteurs__carte canvas, .visiteurs__carte svg { max-width: 100%; height: auto; }
+
+/* Citations */
+.citation { margin: 0 0 2.2rem; max-width: 680px; }
+.citation__texte { margin: 0; padding: 0 0 0 1.2rem; border-left: 1px solid var(--encre); }
+.citation__texte p {
+  margin: 0; font-family: var(--texte); font-style: italic; font-weight: 400;
+  font-size: 1.22rem; line-height: 1.55; color: #2e2e2e;
+}
+.citation__auteur {
+  margin: 0.6rem 0 0 1.2rem; font-size: 0.85rem; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--gris);
+}
+.citation__auteur cite { font-style: italic; text-transform: none; letter-spacing: 0; font-size: 1rem; }
+.citation--large { max-width: 760px; margin-bottom: 0.4rem; }
+.citation--portrait { margin: 0; max-width: 260px; text-align: center; }
+.citation--portrait .citation__texte { border-left: 0; padding: 0; }
+.citation--portrait .citation__texte p { font-size: 1.15rem; line-height: 1.45; }
+.citation--portrait .citation__texte p::before { content: "“"; }
+.citation--portrait .citation__texte p::after { content: "”"; }
+html[lang="fr"] .citation--portrait .citation__texte p::before { content: "« "; }
+html[lang="fr"] .citation--portrait .citation__texte p::after { content: " »"; }
+.citation--portrait .citation__auteur { margin: 0.5rem 0 0; }

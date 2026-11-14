@@ -2,7 +2,7 @@
 #
 # visuel → ce qui s'affiche dans le carré :
 #   type: video   + fichier (mp4 court, muet) + affiche (image de départ)
-#   type: image   + fichier (jpg/png/webp)
+#   type: image   + fichier (jpg/png/webp/svg)
 #   type: schema  + etapes (liste de mots, dessinée comme un petit schéma)
 # Les fichiers vont dans assets/media/.
 
@@ -25,30 +25,32 @@
   technos: "Rust · whisper.cpp · Nix"
   lien: "https://github.com/thibaut7/voicebridge"
   visuel:
-    type: schema
-    etapes: ["voix", "whisper.cpp", "presse-papiers"]
+    type: image
+    fichier: "voicebridge.svg"
+    texte_alt: "Un micro, une onde sonore, puis des lignes de texte"
   liens:
     - nom: code
       url: "https://github.com/thibaut7/voicebridge"
 
-- titre: "Modern Lakehouse"
-  description: "Un data lakehouse complet en local : ingestion, tables Iceberg, traitements Spark, gouvernance et supervision."
-  technos: "Docker · Spark · Iceberg · Grafana"
-  lien: "https://github.com/thibaut7/modern_lakehouse"
+- titre: "Tracking d'objet dans un flux vidéo"
+  description: "Suivre un objet image après image dans un flux vidéo."
+  lien: "https://gitlab.com/komilo/tracking-d-objet-dans-un-flux-video"
   visuel:
-    type: schema
-    etapes: ["NiFi", "Iceberg · MinIO", "Spark", "Postgres"]
+    type: image
+    fichier: "tracking.svg"
+    texte_alt: "Trois images d'un film où un objet encadré se déplace le long d'une trajectoire"
   liens:
     - nom: code
-      url: "https://github.com/thibaut7/modern_lakehouse"
+      url: "https://gitlab.com/komilo/tracking-d-objet-dans-un-flux-video"
 
 - titre: "MCQ Generator"
   description: "Génère des QCM à partir d'un texte, avec l'API OpenAI et une interface Streamlit."
   technos: "Python · OpenAI · Streamlit"
   lien: "https://github.com/thibaut7/mcqgenerator"
   visuel:
-    type: schema
-    etapes: ["texte", "OpenAI", "QCM"]
+    type: image
+    fichier: "mcq.svg"
+    texte_alt: "Une page de texte transformée en questionnaire à cases"
   liens:
     - nom: code
       url: "https://github.com/thibaut7/mcqgenerator"

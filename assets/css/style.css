@@ -45,22 +45,22 @@ a:focus-visible { outline: 2px solid var(--encre); outline-offset: 3px; }
 .nav__links { display: flex; flex-wrap: wrap; gap: 1.8rem; font-size: 1.05rem; font-style: italic; }
 
 /* En-tête */
-.hero { display: flex; flex-wrap: wrap; gap: 3rem; align-items: center; padding: 6rem 0 5rem; }
+.hero { display: flex; flex-wrap: wrap; gap: 3rem; align-items: center; padding: 4.5rem 0 4rem; }
 .hero__text { flex: 999 1 460px; min-width: 0; }
 .hero__name {
   margin: 0; font-family: var(--calli); font-weight: 400;
-  font-size: clamp(4rem, 10vw, 7.5rem); line-height: 0.95;
+  font-size: clamp(3rem, 7vw, 5.2rem); line-height: 1;
 }
-.hero__lead { margin: 2rem 0 0; font-size: 1.5rem; font-weight: 500; max-width: 560px; }
+.hero__lead { margin: 1.6rem 0 0; font-size: 1.5rem; font-weight: 500; max-width: 560px; }
 .hero__note { margin: 1rem 0 0; font-style: italic; color: var(--gris); }
 .hero__portrait {
-  flex: 0 1 240px; width: 240px; max-width: 240px; aspect-ratio: 1 / 1;
+  flex: 0 1 200px; width: 200px; max-width: 200px; aspect-ratio: 1 / 1;
   border-radius: 50%; border: 1px solid var(--encre);
   outline: 1px solid var(--encre); outline-offset: 6px; object-fit: cover;
 }
 .hero__portrait--vide {
   display: flex; align-items: center; justify-content: center;
-  font-family: var(--calli); font-size: 7rem; line-height: 1;
+  font-family: var(--calli); font-size: 5.5rem; line-height: 1;
 }
 
 /* Sections : titre calligraphique à gauche, contenu à droite */
@@ -79,12 +79,13 @@ a:focus-visible { outline: 2px solid var(--encre); outline-offset: 3px; }
 .projet { display: flex; flex-direction: column; gap: 0.7rem; }
 .projet__visuel {
   position: relative; display: flex; align-items: center; justify-content: center;
-  aspect-ratio: 1 / 1; border: 1px solid var(--encre); border-radius: var(--arrondi);
+  aspect-ratio: 4 / 3; border: 1px solid var(--encre); border-radius: var(--arrondi);
   background: var(--fond-vignette); overflow: hidden; text-decoration: none;
 }
 .projet__visuel video, .projet__visuel img {
   position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;
 }
+.projet__visuel img[src$=".svg"] { object-fit: contain; padding: 9% 5% 4%; }
 .projet__num {
   position: absolute; top: 0.6rem; left: 0.7rem; z-index: 1;
   font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase;

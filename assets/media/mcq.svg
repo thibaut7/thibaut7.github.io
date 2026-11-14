@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="24 38 352 264" fill="none" stroke="#141414" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+  <!-- le texte source -->
+  <path d="M52 76 h76 l22 22 v126 h-98 z"/>
+  <path d="M128 76 v22 h22"/>
+  <g stroke-width="1.2">
+    <line x1="66" y1="116" x2="136" y2="116"/>
+    <line x1="66" y1="132" x2="130" y2="132"/>
+    <line x1="66" y1="148" x2="136" y2="148"/>
+    <line x1="66" y1="164" x2="122" y2="164"/>
+    <line x1="66" y1="180" x2="136" y2="180"/>
+    <line x1="66" y1="196" x2="108" y2="196"/>
+  </g>
+  <!-- flèche -->
+  <path d="M172 150 h40 m-9 -8 l9 8 l-9 8"/>
+  <!-- le QCM généré -->
+  <rect x="234" y="76" width="118" height="148"/>
+  <line x1="248" y1="98" x2="336" y2="98" stroke-width="2"/>
+  <g stroke-width="1.3">
+    <rect x="248" y="118" width="12" height="12"/><line x1="270" y1="124" x2="330" y2="124"/>
+    <rect x="248" y="146" width="12" height="12"/><line x1="270" y1="152" x2="322" y2="152"/>
+    <rect x="248" y="174" width="12" height="12"/><line x1="270" y1="180" x2="334" y2="180"/>
+    <rect x="248" y="202" width="12" height="12"/><line x1="270" y1="208" x2="316" y2="208"/>
+  </g>
+  <path d="M250 152 l4 4 l8 -10" stroke-width="2"/>
+</svg>
